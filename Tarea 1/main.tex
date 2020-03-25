@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\textheight = 25cm 
+\textwidth = 15cm
+\topmargin = -3.0cm 
+\oddsidemargin = 1.5cm
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    citecolor=black,      
+    urlcolor=blue,
+    }
+
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{gensymb}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools, xparse}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage[many]{tcolorbox}
+\usepackage{lipsum}
+
+\title{Tarea 2 Matemáticas Avanzadas de la Física}
+\author{Cerritos Lira Carlos}
+\date{2 de Marzo del 2020}
+
+\begin{document}
+\maketitle
+\section*{1.-}
+Las isotermas de un sistema pueden cortarse? Explique detalladamente.
+
+\section*{2.-}
+Sean $A,B,C$ tres gases con variables $(p,V),(p',V'),(p'',V'')$, respectivamente. 
+Cuando $A$ está en equilibrio térmico con $C$ se satisface la ecuación:
+\begin{align*}
+    pV - nbp - p''V'' = 0
+\end{align*}
+cuando $B$ está en equilibrio térmico con $C$ se cumple:
+\begin{align*}
+    p'V' - p''V'' + \frac{nB'p''V''}{V'} &= 0
+\end{align*}
+\begin{enumerate}[a)]
+    \item Encuentre las funciones $q(p,V),r(p',V')$ y $s(p'',V'')$ que son iguales 
+    entre si en el equilibrio térmico e iguales a la temperatura común $T$.
+
+    \item Encuentre la ecuación que corresponde a $A$ en equilibrio térmico con $B$
+\end{enumerate}
+
+\section*{3.-}
+Un gas ideal se caracteriza mediante dos suposiciones: los átomos o moléculas de un gas 
+ideal no interactúan entre sí, y los átomos o moléculas se pueden tratar como masas 
+puntuales. Esto tiene un rango de validez limitada. \\ \\ 
+Se muestra la energía potencial de interacción de dos moléculas de gas en función 
+de la distancia entre ellas. El potencial intermolecular se peude dividir en regiones
+en las que la energía potencial es esencialmente nula $(r>r_{trans})$, negativa
+(interacción atractiva) $(r_{trans} > r > r_{V=0})$, y positiva (interacción repulsiva).
+La distancia $r_{trans}$ no está defininida unívocamente y depende de la energía de la 
+molécula.
+
+\begin{enumerate}[a)]
+    \item Calcule la presión ejercida por $N_2$ a $300K$ para vólumenes molares de 
+    $250$ y $0.100L$ usando las ecuaciones de estado del gas ideal y de van der Waals.
+    Los valores de los parámetros $a$ y $b$ para $N_2$ son $1.360bar dm^3 mol^{-2}$ y
+    $0.0387 dm^3 mol^{-1}$ respectivamente. 
+    
+    \item Compare y explique los reusltados de los cálculos a las dos presiones y 
+    explique qué predomina, las intersacciones atractivas o las repulsivas.
+
+    \item A temperatura suficientemente elevada, la ecuación de van der Waals tiene 
+    la forma $P = \frac{nR}{V-b}$. Nótese que la parte atractiva del potencial no tiene 
+    influencia en esta expresión. Justifique este comportamiento uisando el diagrama 
+    anterior.
+\end{enumerate}
+
+\section*{4.-}
+Sabemos que la ecuación de van der Waals permite hacer una descripción cualitativa 
+de la transición líquido- vapor, por lo cual, como se mencionó en clase, el 
+valor del parámetro $a$ tiene una relación con el calor de vaporzación del líquido y 
+el párametro $b$  con el tamaño de las moléculas. Del artículo de van der Waals haga 
+una descripción, en no menos de una cuartilla, de lo que son las fuerzas de 
+van der Waals, como se analiza en el punto crítico, el factor de compresibildiad y al 
+ensión superficial.
+
+\section*{5.-}
+Sea un gas en un recipiente cilíndrico de un metro de altura, cuya tapa superior es 
+un pistón inicialmente fijo. El gas está en equilibrio a temperatura y presión ambiente
+y bajo estas condiciones sabemos que la velocidad de propragación del sonido es 
+$c = 340 \frac{m}{seg}$. Supongamso que liberamos al pistón para que pueda moverse 
+libremente. Ahora le damos un martillazo al pistón, generando así una situación de
+desequilibrio en el gas. También inmediatamente aislamos térmicamente al sistema. 
+\begin{enumerate}[a)]
+    \item Culcule el tiempo que tarda en saber la parte inferior del gas que ha sido 
+    golpeado 
+
+    \item Discuta cualitativamente qué ocurrió con la energía proporcionada por el 
+    martillazo. 
+
+    \item ¿Se restaura el equilibrio o queda oscilando?
+\end{enumerate}
+
+\section*{6.-}
+Demuestre que para un gas ideal $pv = RT$, $\beta = \frac{1}{T}$, $k = \frac{1}{p}$. \\
+Para un gas real a presiones moderadas, $P(v-b) = RT$, donde $R$ y $b$ son constantes, 
+es una ecuación de estado aproximada que tiene en cuenta el tamaño finito de las moléculas.
+Demostrar que:
+\begin{enumerate}[a)]
+    \item $\beta = \frac{\frac{1}{T}}{1+\frac{bP}{RQ}}$
+    \item $k = \frac{\frac{1}{p}}{1+\frac{bP}{RT}} $
+\end{enumerate}
+
+\section*{7.-}
+Un hilo metálico de $0.0085cm^3$ de sección transversal está sometido a una tensión de 
+$20N$, a la temperatura de $10\degree C$, ente dos soportes rígidos separados $1.2m$. 
+\begin{enumerate}[a)]
+    \item ¿Cuál es la tensión final, si la temperatura se reduce $8\degree C$?
+    $(\alpha = 1.5 \times 10^{-5}K^{-1}), Y = 2.0 \times 10^9 \frac{N}{m^2}$
+
+    \item La frecuencia fundamental de vibración de un alambre de longitud $L$, 
+    masa $m$ y tensión $\tau$ es:
+    \[ f_1 = \frac{1}{2L} \sqrt{\frac{\tau L}{m}} \]
+    ¿Con qué frecuencia vibra el hilo a $20\degree C$. ¿Y a $8\degree C$
+\end{enumerate}
+
+\section*{8.-}
+Muestre que si las diferenciales $dV, dp$ dadas por:
+\begin{align*}
+    dV &= v\beta dT - Vk_T dp \\
+    dp &= \frac{\beta}{k_T} dT - \frac{1}{V_{k_T}}dV
+\end{align*}
+Son exactas, entonces los coeficientes satisfacen las siguientes relaciones:
+\begin{align*}
+    \left( \frac{\partial V\beta}{\partial p} \right)
+    &=\left( \frac{\partial V_{k_T}}{\partial T} \right) \\
+    - \left( \frac{\partial \beta}{\partial V} \right)
+    &=\beta \left( \frac{\partial lnK_T}{\partial V} \right) 
+    + \frac{1}{V}\left( \frac{\partial lnk_t}{\partial T} \right)
+\end{align*}
+\section*{9.-} 
+La resistencia eléctrica en el hilo de un termómetro de platino varía linealmente con
+la temperatura. Determinar:
+\begin{enumerate}
+    \item La expresión de la temperatura centígrada en el punto de fusión del hielo 
+    $R_0$ y en el punto de ebullición del agua $R_{100}$. 
+    
+    \item Si los valores de una resistencia para un termómetro de hilo de platino son de 
+    $R_0 = 10000 \Omega$ y $R_{100} = 13861 \Omega$, calcular la temperatura correspondiente 
+    a una resistencia de $26270 \Omega$. 
+\end{enumerate}
+
+
+
+\end{document}

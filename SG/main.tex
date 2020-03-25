@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{tcolorbox}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Ricky Frank}
+
+\begin{document}
+
+\section*{Primera ley}
+Se tiene la relación:
+\begin{align*}
+    dU 
+    &=dQ + dW \\
+    &=dQ - PdV \\
+    \therefore dQ 
+    &=dU + PdV 
+\end{align*}
+Si suponemos que tenemos $U(T,V)$ se tiene:
+\begin{align*}
+    dU &=\frac{\partial U}{\partial T} dT + \frac{\partial U}{\partial V}dV 
+\end{align*}
+de donde obtenemos:
+\begin{align*}
+    dQ 
+    &=dU + PdV \\
+    &=\left(\frac{\partial U}{\partial T}\right)_V dT 
+    + \left[\left(\frac{\partial U}{\partial V}\right)_T + P \right] dV
+\end{align*}
+se tiene entonces las relaciones:
+\begin{align*}
+    \left(\frac{\partial Q}{\partial T}\right)_V 
+    &=\left(\frac{\partial U}{\partial T}\right)_V
+\end{align*}
+ahora bien, podemos obtener $\left(\frac{\partial Q}{\partial T}\right)_P$ mediante
+la relación:
+\begin{align*}
+    Q(T,P) 
+    &=Q(T,V(P,T)) \\
+    \left(\frac{\partial Q}{\partial T}\right)_P
+    &=\left(\frac{\partial U}{\partial T}\right)_V
+    + \left[\left(\frac{\partial U}{\partial V}\right)_T + P \right] 
+    \left( \frac{\partial V}{\partial T} \right)_P
+\end{align*}
+de donde obtenemos:
+\begin{align*}
+    C_P 
+    &=C_V + \left[ \left( \frac{\partial U}{\partial V} \right)_T + P \right] V\beta \\
+    \therefore \left( \frac{\partial U}{\partial V} \right)_T 
+    &= \frac{C_P - C_V}{V \beta} - P
+\end{align*}
+\end{document}

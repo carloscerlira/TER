@@ -27,14 +27,42 @@
 \usepackage[many]{tcolorbox}
 \usepackage{lipsum}
 
-\title{Tarea 2 Matemáticas Avanzadas de la Física}
+\title{Tarea 1 Termodinámica}
 \author{Cerritos Lira Carlos}
-\date{2 de Marzo del 2020}
+\date{3 de abril del 2020}
 
 \begin{document}
 \maketitle
 \section*{1.-}
 Las isotermas de un sistema pueden cortarse? Explique detalladamente.
+\begin{tcolorbox}[breakable]
+    \subsubsection*{Caso general}
+    Dado un sistema  y su funcion de estado 
+    \[ f(P,V,T) = 0 \]
+    es verdad que dado $(P_0,V_0,T_0)$, podemos obtener localmente una función 
+    $T(P,V)$ tal que:
+    \[ f(P,V,T(V,P)) = 0 \quad \forall (P,V) \in B_{\delta}(P_0,V_0) \] 
+    las isotermas no se pueden cruzar si esta función local se puede 
+    hacer global, sin embargo este no es siempre el caso.
+    \subsubsection*{Gas ideal}
+    En este modelo:
+    \begin{align*}
+        PV &= nRT \\
+        T(V,P) &= \frac{PV_m}{R}   
+    \end{align*}
+    claramente pudimos obtener $T$ de forma global entonces las isotermas no se intersectan.
+
+    \subsubsection*{Redlich–Kwong}  
+    En este modelo:
+    \begin{align*}
+        P = \frac{RT}{V_m-b} - \frac{a}{\sqrt{T}V_m(V_m+b)}
+    \end{align*}
+    se puede demostrar que no hay una función que cumpla:
+    \begin{align*}
+        f(P,V,T(P,V)) &= 0 \quad \forall (V,P)
+    \end{align*}
+    se puede entonces tener dos temperaturas para el mismo volumen y presión. 
+\end{tcolorbox}
 
 \section*{2.-}
 Sean $A,B,C$ tres gases con variables $(p,V),(p',V'),(p'',V'')$, respectivamente. 
@@ -53,6 +81,9 @@ cuando $B$ está en equilibrio térmico con $C$ se cumple:
     \item Encuentre la ecuación que corresponde a $A$ en equilibrio térmico con $B$
 \end{enumerate}
 
+\begin{tcolorbox}[breakable]
+    
+\end{tcolorbox}
 \section*{3.-}
 Un gas ideal se caracteriza mediante dos suposiciones: los átomos o moléculas de un gas 
 ideal no interactúan entre sí, y los átomos o moléculas se pueden tratar como masas 
@@ -74,11 +105,49 @@ molécula.
     explique qué predomina, las intersacciones atractivas o las repulsivas.
 
     \item A temperatura suficientemente elevada, la ecuación de van der Waals tiene 
-    la forma $P = \frac{nR}{V-b}$. Nótese que la parte atractiva del potencial no tiene 
+    la forma $P = \frac{RT}{V-b}$. Nótese que la parte atractiva del potencial no tiene 
     influencia en esta expresión. Justifique este comportamiento uisando el diagrama 
     anterior.
 \end{enumerate}
 
+\begin{tcolorbox}[breakable]
+    \subsection*{a)}
+    De acuerdo al gas ideal:
+    \begin{align*}
+        P_{I} 
+        &= \frac{RT}{V_m} \\
+        P_{I_{250}}
+        &= RT \cdot 0.004 = 0.09977 bar\\ 
+        P_{I_{0.1}}
+        &= RT \cdot 10 = 249.43 bar 
+    \end{align*}
+    De acuerdo a Van der Waals:
+    \begin{align*}
+        P_{W}
+        &= \frac{RT}{(V_m - b)} - \frac{a}{V_m^2} \\
+        P_{W_{250}}
+        &= RT \cdot 0.004 - 2.17\times 10^{-5} = 0.09976 bar \\
+        P_{W_{0.01}}
+        &= RT \cdot 16 - 135.99 = 270.905
+    \end{align*}
+
+    \subsection*{b)}
+    Podemos ver que se cumplen las relaciones:
+    \begin{align*}
+        P_{I_{250}} \approx P_{W_{250}} \\
+        P_{I_{0.1}} < P_{W_{0.1}}
+    \end{align*}
+    De acuerdo a la gráfica las interacciones para $V=250L$ nos encontramos en 
+    la región $r > r_{trans}$ y para $V=0.1L$ en la región $r < r_V$
+
+    \subsection*{c)}
+    De acuerdo a la gráfica de la energía potencial nos encontramos en la región 
+    $r > r_{trans}$, esto tiene sentido pues a medida que aumenta el volumen 
+    la distancia entre las molélculas del gas es más grande, lo que se ve reflejado  
+    en la ecuaciones dado que podemos omitir el término $\frac{1}{V_m^2}$
+
+
+\end{tcolorbox}
 \section*{4.-}
 Sabemos que la ecuación de van der Waals permite hacer una descripción cualitativa 
 de la transición líquido- vapor, por lo cual, como se mencionó en clase, el 
@@ -88,6 +157,9 @@ una descripción, en no menos de una cuartilla, de lo que son las fuerzas de
 van der Waals, como se analiza en el punto crítico, el factor de compresibildiad y al 
 ensión superficial.
 
+\begin{tcolorbox}[breakable]
+    
+\end{tcolorbox}
 \section*{5.-}
 Sea un gas en un recipiente cilíndrico de un metro de altura, cuya tapa superior es 
 un pistón inicialmente fijo. El gas está en equilibrio a temperatura y presión ambiente
@@ -105,6 +177,56 @@ desequilibrio en el gas. También inmediatamente aislamos térmicamente al siste
     \item ¿Se restaura el equilibrio o queda oscilando?
 \end{enumerate}
 
+\begin{tcolorbox}[breakable]
+    El problema se ilustra en el siguiente diagrama:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{images/p5_piston.png}
+        \caption{Diagrama recipiente cilíndrico}
+    \end{figure}
+    Nuestro objetivo es encontrar la fuerza que actua en el pistón, donde se 
+    sabe:
+    \begin{align*}
+        F &= S(P_0-P)
+    \end{align*}
+    Como el proceso es adiabático se tiene:
+    \begin{align*}
+        PV^{\gamma} &= c
+    \end{align*}
+    sabemos que $V(x) = V_0-Sx$, usando el hecho $\frac{V}{V_0} \in (0,1)$ y
+    despejando $P$ obtenemos:
+    \begin{align*}
+        P &= P_0 \left( \frac{V}{V_0} \right)^{-\gamma} \\ 
+        &\approx P_0 \left(-\gamma \left(\frac{V}{V_0}-1\right) + 1\right)  \\
+        &\approx P_0 \left(1+\gamma \frac{S}{V_0}x \right)
+    \end{align*}
+    de donde obtenemos la fuerza:
+    \begin{align*}
+        F = -\left(P_0\gamma \frac{S}{V_0}\right)x 
+    \end{align*}
+    Por lo tanto el piston sigue un movimiento armónico simple. 
+    \subsection*{a)}
+    Para que la onda de presión llege al fondo del recipiente debe de recorrer una 
+    distancia de $1-x_0$, de acuerdo a la formula tenemos:
+    \begin{align*}
+        t 
+        &= \frac{d}{V} \\
+        &= \frac{1-x_0}{340}[s]
+    \end{align*}
+    en el caso de que $x_0 \approx 0$ se tiene $t = \frac{1}{340}[s]$
+    \subsection*{b)}
+    La energía proporcionada es transferida las partículas dentro del cilindro, 
+    formandose una onda de presión, esto es $p(x,t)$, la función que nos dice la 
+    presión en la posición $x$ al tiempo $t$ satisface la ecuación 
+    de onda, con condición inicial $p(x_0,0) = p_0$ donde $p_0$ está dado en 
+    función de la energía cinética del martillo durante el golpe, esta onda 
+    recorre el cilindro tan rápido que se considera la presión uniforme 
+    en todos los puntos. 
+    \subsection*{c)}
+    Como se vio la fuerza que actua es la del movimiento armónico simple, por lo 
+    tanto este es el movimiento que se sigue (si ignoramos la fricción).
+    
+\end{tcolorbox}
 \section*{6.-}
 Demuestre que para un gas ideal $pv = RT$, $\beta = \frac{1}{T}$, $k = \frac{1}{p}$. \\
 Para un gas real a presiones moderadas, $P(v-b) = RT$, donde $R$ y $b$ son constantes, 
@@ -115,6 +237,9 @@ Demostrar que:
     \item $k = \frac{\frac{1}{p}}{1+\frac{bP}{RT}} $
 \end{enumerate}
 
+\begin{tcolorbox}[breakable]
+    
+\end{tcolorbox}
 \section*{7.-}
 Un hilo metálico de $0.0085cm^3$ de sección transversal está sometido a una tensión de 
 $20N$, a la temperatura de $10\degree C$, ente dos soportes rígidos separados $1.2m$. 
@@ -127,6 +252,19 @@ $20N$, a la temperatura de $10\degree C$, ente dos soportes rígidos separados $
     \[ f_1 = \frac{1}{2L} \sqrt{\frac{\tau L}{m}} \]
     ¿Con qué frecuencia vibra el hilo a $20\degree C$. ¿Y a $8\degree C$
 \end{enumerate}
+\begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+    Para este tipo de sistemas se tiene la relación:
+    \begin{align*}
+        \frac{\partial \Gamma}{\partial T} &= -\alpha A Y
+    \end{align*}
+    integrando obtenemos la nueva tensión:
+    \begin{align*}
+        \tau  &= -\alpha A Y (T-T_0) + \tau _0 \\ 
+        \tau (8) &= 
+    \end{align*}
+    \subsubsection*{b)}
+\end{tcolorbox}
 
 \section*{8.-}
 Muestre que si las diferenciales $dV, dp$ dadas por:
@@ -142,6 +280,10 @@ Son exactas, entonces los coeficientes satisfacen las siguientes relaciones:
     &=\beta \left( \frac{\partial lnK_T}{\partial V} \right) 
     + \frac{1}{V}\left( \frac{\partial lnk_t}{\partial T} \right)
 \end{align*}
+
+\begin{tcolorbox}[breakable]
+
+\end{tcolorbox}
 \section*{9.-} 
 La resistencia eléctrica en el hilo de un termómetro de platino varía linealmente con
 la temperatura. Determinar:
@@ -154,6 +296,28 @@ la temperatura. Determinar:
     a una resistencia de $26270 \Omega$. 
 \end{enumerate}
 
+\begin{tcolorbox}[breakable]
+    \subsubsection*{a)}
+    Podemos obtener la temperatura mediante la relación:
+    \begin{align*}
+        T = k(R-R_0) + T_0
+    \end{align*}
+    donde $T_0$ es la temperatura que se tiene cuando se tiene una resistencia $R_0$,
+    en nuestro caso queremos que sea $0 [\degree C]$, de donde obtenemos:
+    \begin{align*}
+        T_0 &= 0  \\
+        T_{100} &= k(R_{100}-R_0) 
+    \end{align*}
+    \subsubsection*{b)}
+    Despejamos el valor de $k$:
+    \begin{align*}
+        k &= \frac{T_{100}}{R_{100}-R_0} = 0.25 \left[ \frac{\degree C}{\Omega} \right]
+    \end{align*}
+    sustituyendo encontramos $T$:
+    \begin{align*}
+        T &= k(R_{T} - R_{0}) = 421 [\degree C] 
+    \end{align*}
 
+\end{tcolorbox}
 
 \end{document}

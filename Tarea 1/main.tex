@@ -1,3 +1,4 @@
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \textheight = 25cm 
@@ -26,10 +27,16 @@
 
 \usepackage[many]{tcolorbox}
 \usepackage{lipsum}
+\usepackage{amssymb}
 
 \title{Tarea 1 Termodinámica}
-\author{Cerritos Lira Carlos}
+\author{Cerritos Lira, Carlos\\
+Calderón Alba, Sebastián \\ Pérez Anaya, Gustavo Miguel\\ 
+Velasco Salazar, Pablo}
 \date{3 de abril del 2020}
+
+\newcommand{\pr}[1]{\left(#1\right)}
+\newcommand{\pt}[2]{\dfrac{\partial #1}{\partial #2}}
 
 \begin{document}
 \maketitle
@@ -82,6 +89,69 @@ cuando $B$ está en equilibrio térmico con $C$ se cumple:
 \end{enumerate}
 
 \begin{tcolorbox}[breakable]
+    \subsection*{a)} Recrodemos que para que se cumpla la Ley Cero se debe cumplir 
+    
+    \begin{align*}
+        F_{ac}&=g\pr{V_c}h\pr{p_a,V_a}+J\pr{V_c}\\
+        F_{bc}&=g\pr{V_c}h\pr{p_b,V_b}+J\pr{V_c}
+    \end{align*}
+    
+    donde $F_{ac}$ y $F_{bc}$ hacen referencia al equilibrio termodinpamico entre los sistemas $AC$ y $BC$. Veamos que para que $F_{ac}=F_{bc}$ se debe cumplir que $h\pr{p_a,V_a}=h\pr{p_b,V_b}$. En este caso tendemos que del sistema $AC$
+    
+    \begin{align*}
+        pV-nbp-p''V''&=0\\
+        \Rightarrow p''V''&=pV-nbp
+    \end{align*}
+    
+    Por otra parte, del sistema $BC$ tenemos que
+    
+    \begin{align*}
+        p'V'-p''V''+\dfrac{nB'p''V''}{V'}&=0\\
+        \Rightarrow p''V''\pr{-1+\dfrac{nB'}{V'}}&=-p'V'\\
+        \Rightarrow p''V''\pr{nB'-V'}&=-pV'^2\\
+        \Rightarrow p''V''&=\dfrac{pV'^2}{V'-nB'}
+    \end{align*}
+    
+    De igualar las ecuaciones anteriores es facil ver la siguiente igualdad
+    
+    \begin{align*}
+        pV-nbp=\dfrac{p'V'^2}{V'-nB'}=p''V''
+    \end{align*}
+    
+    donde todas son iguales a la temperatura común, eotnces podemos fer que las funciones que buscábamos
+    
+    \begin{align*}
+        q&\pr{p,V}=pV-nbp\\
+        r&\pr{p',V'}=\dfrac{p'V'^2}{V'-nB'}\\
+        s&\pr{p'',V''}=p''V''
+    \end{align*}
+    
+    
+    
+    \subsection*{b)}
+    Para hallar esta ecuación despejaremos $p''V''$ de las dos ecuaciones de equilibrio dadas en el problemas, es decir 
+    
+    \begin{align*}
+        p''V''=pV-nbp \tag{2.1}
+    \end{align*}
+    
+    Por otro lado 
+    
+    \begin{align*}
+        p''V''\left(-1+\dfrac{nB'}{V'}\right)&=-p'V'\\
+        \Rightarrow p''V''\left(nB'-V'\right)&=-pV'^2\\
+        \Rightarrow p''V''&=\dfrac{pV'^2}{V'-nB'} \tag{2.2}
+    \end{align*}
+    
+    Ahora, igualamos \textbf{(2.1)} con \textbf{(2.2)}
+    
+    \begin{align*}
+        \Rightarrow pV-nbp=\dfrac{pV'^2}{V'-nB'}\\
+        \therefore pV+\dfrac{pV'^2}{nB'-V'}-nbp=0
+    \end{align*}
+    
+    Ésta es la ecuación que corresponde a $A$ en equilibrio térmico con $B$
+    
     
 \end{tcolorbox}
 \section*{3.-}
@@ -128,7 +198,7 @@ molécula.
         P_{W_{250}}
         &= RT \cdot 0.004 - 2.17\times 10^{-5} = 0.09976 bar \\
         P_{W_{0.01}}
-        &= RT \cdot 16 - 135.99 = 270.905
+        &= RT \cdot 16 - 135.99 = 270.905 bar 
     \end{align*}
 
     \subsection*{b)}
@@ -158,6 +228,35 @@ van der Waals, como se analiza en el punto crítico, el factor de compresibildia
 ensión superficial.
 
 \begin{tcolorbox}[breakable]
+    La termodinámica tuvo apogeo en la primera revolución industrial, ahí se puso mucha atención al estudio de los gases. Posteriormente, en el siglo XIX se le dio mas atención debido a los procesos que involucraban petroleo y sus derivados para producir energía. \ 
+    
+    Ahora la termodinámica es una rama de la física que tiene varias aplicaciones; como el desarrollo de nuevas tecnologías para explorar al espacio.\\ 
+    
+    \textbf{Fuerzas de Van der Waals}\
+    
+    Con los trabajos de  Boyle y Gay-Lussac se tenía un estudio de los gases, pero para las necesidades de la época no eran suficientes. Pero fue con Johannes Diderik Van der Waals, quien modifico el modelo previo considerando que las moléculas ocupan cierto espacio, tienen forma esferica y además que ejercen fuerzas atractivas entre ellas.\
+    
+    En su modelo incluyo dos nuevas constantes, \textit{a} y \textit{b}, donde esta ultima hace referencia al volumen esférico que utilizan las partículas, mientras que \textit{a} hace referencia a las fuerzas de cohesión (o atractiva) que hay entre ellas. A las fuerzas de cohesión se les llama fuerzas de Van der Waals o fuerzas de dipolo. \
+    
+    Así Johannes Diderik Van der Waals unificó casi todo el conocimiento experimental sobre propiedades de los fluidos existentes hasta en 1870 en una única ecuación.\\ 
+    
+    \textbf{Punto critico}\
+    
+    Al momento de investigar el comportamiento de los gases, se dieron cuenta de que a cierta temperatura el menisco que marca la división entre la fase liquida y la de vapor de una sustancia desaparecía y la densidad del líquido y el vapor eran las mismas. Eso ocurría debido a que, cuando se sube la temperatura de un sistema líquido, este se expande; mientras que en un sistema con gas aumenta la presión y por ende la densidad del gas. \ 
+    
+    A este estado se le conoce como \textit{punto critico}, y se le asocian las variables de temperatura critica, volumen critico y presión critica. El resultado que se obtuvo fue que los valores de las constantes \textit{a} y \textit{b} dejaron de ser valores empíricos. \\
+    
+    \textbf{Factor de compresibilidad}\
+    
+    El factor de compresibilidad queda definido como la razón entre el volumen molar de un gas real y un gas ideal. Este es para observar que tan parecido es el gas ideal con el gas real, es decir, la desviación. Para el gas ideal este factor es igual a la constante uno. Por ejemplo en los isótopos del gas de Helio es alrededor de 0.30. \
+    
+    El factor de compresibilidad representa la cercanía con el modelo ideal y se utiliza para comparar el comportamiento de un gas real con respecto al establecido por la ecuación de los gases ideales. \\ 
+    
+    \textbf{Tensión superficial}\
+    
+    Esta se define como el trabajo necesario para transportar moléculas hacia la superficie de un líquido. La tensión superficial se debe a que las fuerzas que afectan a cada molécula son diferentes entre el interior del líquido y la superficie. \ 
+    
+    Entre mas interacciones intermoleculares existan, el trabajo necesario para trasladar las moléculas del interior del líquido a la superficie es mayor, entonces el valor de la tensión superficial es mayor. \\ 
     
 \end{tcolorbox}
 \section*{5.-}
@@ -181,7 +280,7 @@ desequilibrio en el gas. También inmediatamente aislamos térmicamente al siste
     El problema se ilustra en el siguiente diagrama:
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.5]{images/p5_piston.png}
+        \includegraphics[scale=0.7]{images/p5_piston.png}
         \caption{Diagrama recipiente cilíndrico}
     \end{figure}
     Nuestro objetivo es encontrar la fuerza que actua en el pistón, donde se 
@@ -238,8 +337,69 @@ Demostrar que:
 \end{enumerate}
 
 \begin{tcolorbox}[breakable]
-    
+    \subsection*{a)}
+    Partiremos de:
+    \begin{align*}
+        PV &= RT \\
+        \beta &= \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P \\
+         K &= \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T
+    \end{align*}
+    Despejando V:
+    \begin{align*}
+        V 
+        &= \frac{RT}{P}\\
+        \frac{\partial V}{\partial T} 
+        &= \frac{R}{P} \\
+        \frac{\partial V}{ \partial P} 
+        &= \frac{-RT}{P^2}   
+    \end{align*}
+    Sustituyendo en la definición de $\beta, K$:
+    \begin{align*}
+        \beta 
+        &= \frac{1}{V} \frac{R}{P} 
+        = \frac{1}{\frac{RT}{P}} \frac{R}{P} 
+        = \frac{P}{RT} \frac{R}{P} = \frac{1}{T} \\
+        K 
+        &= \frac{-1}{V} \left(\frac{-RT}{P^2} \right)
+        = \frac{1}{P}
+    \end{align*}
+    \subsection*{b)}
+     Partiremos de:
+    \begin{align*}
+        P(V-b) &= RT 
+    \end{align*}
+    Despejando V:
+    \begin{align*}
+        V 
+        &= \frac{RT}{P} + b \\
+        \frac{\partial V}{\partial t} 
+        &= \frac{R}{P}    \\ 
+        \frac{\partial V}{\partial P} 
+        &= \frac{-RT}{P^2}    
+    \end{align*}
+    Sustituyendo en la definición de $\beta$:
+    \begin{align*}
+        \beta 
+        &= \frac{1}{V} \frac{R}{P} \\ 
+        &= \frac{1}{\frac{RT}{P}+b} \frac{R}{P} \\  
+        &= \frac{RT}{T(RT+Pb)} \\ 
+        &= \frac{\frac{1}{V}}{\frac{RT+bP}{RT}} \\
+        &= \frac{\frac{1}{T}}{1+\frac{bP}{RT}}
+    \end{align*}
+    Sustituyendo en la definición de $K$:
+    \begin{align*}
+        K 
+        &= \frac{-1}{V}\left( \frac{-RT}{P^2} \right) \\
+        &= \frac{1}{V}\left(\frac{RT}{P^2}\right) \\
+        &= \frac{1}{\frac{RT}{P}+b} \left(\frac{RT}{P^2}\right) \\
+        &= \frac{P}{RT+Pb} \left(\frac{RT}{P^2}\right) \\
+        &=\frac{RT}{(RT+Pb)P}\\
+        &= \frac{\frac{1}{P}}{\frac{RT+Pb}{RT}} \\
+        &= \frac{\frac{1}{P}}{1+\frac{Pb}{RT}}
+    \end{align*}
 \end{tcolorbox}
+
+
 \section*{7.-}
 Un hilo metálico de $0.0085cm^3$ de sección transversal está sometido a una tensión de 
 $20N$, a la temperatura de $10\degree C$, ente dos soportes rígidos separados $1.2m$. 
@@ -249,39 +409,61 @@ $20N$, a la temperatura de $10\degree C$, ente dos soportes rígidos separados $
 
     \item La frecuencia fundamental de vibración de un alambre de longitud $L$, 
     masa $m$ y tensión $\tau$ es:
-    \[ f_1 = \frac{1}{2L} \sqrt{\frac{\tau L}{m}} \]
+    \[ f = \frac{1}{2L} \sqrt{\frac{\tau L}{m}} \]
     ¿Con qué frecuencia vibra el hilo a $20\degree C$. ¿Y a $8\degree C$
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-    Para este tipo de sistemas se tiene la relación:
+    Para este sistema se tiene la relación:
     \begin{align*}
-        \frac{\partial \Gamma}{\partial T} &= -\alpha A Y
+        \frac{\partial \tau}{\partial T} &= -\alpha A Y
     \end{align*}
-    integrando obtenemos la nueva tensión:
+    integrando obtenemos la tensión en función de T:
     \begin{align*}
-        \tau  &= -\alpha A Y (T-T_0) + \tau _0 \\ 
-        \tau (8) &= 
+        \tau  &= -\alpha A Y (T-10) + \tau_{10} \\ 
+        \tau_8 &= 20.0017N
     \end{align*}
     \subsubsection*{b)}
+    Como vimos $\tau_8 = 1.00085\tau_{10}$ de donde tenemos:
+    \begin{align*}
+        f_{10} &= \sqrt{1.00085}f_8\\ 
+        f_{10} &= 1.000042f_8 
+    \end{align*}
 \end{tcolorbox}
 
 \section*{8.-}
 Muestre que si las diferenciales $dV, dp$ dadas por:
 \begin{align*}
-    dV &= v\beta dT - Vk_T dp \\
-    dp &= \frac{\beta}{k_T} dT - \frac{1}{V_{k_T}}dV
+    dV &= V\beta dT - Vk_T dp \\
+    dp &= \frac{\beta}{k_T} dT - \frac{1}{k_T}dV
 \end{align*}
 Son exactas, entonces los coeficientes satisfacen las siguientes relaciones:
 \begin{align*}
-    \left( \frac{\partial V\beta}{\partial p} \right)
-    &=\left( \frac{\partial V_{k_T}}{\partial T} \right) \\
-    - \left( \frac{\partial \beta}{\partial V} \right)
+    \left( \frac{\partial V \beta}{\partial p} \right)_T
+    &=-\left( \frac{\partial V_{k_T}}{\partial T} \right)_P \\
+     \left( \frac{\partial \beta}{\partial V} \right)_T
     &=\beta \left( \frac{\partial lnK_T}{\partial V} \right) 
-    + \frac{1}{V}\left( \frac{\partial lnk_t}{\partial T} \right)
+    + \frac{1}{V}\left( \frac{\partial lnK_T}{\partial T} \right)
 \end{align*}
 
 \begin{tcolorbox}[breakable]
+Recordemos que podemos ver la diferencial de $V$ como
+\begin{align*}
+    dV=\pr{\pt{V}{T}}_PdT+\pr{\pt{V}{P}}_Tdp
+\end{align*}
+
+De las relaciones dadas en el problema podemos hacer las siguientes igualdades
+\begin{align*}
+    \pr{\pt{V}{T}}_P&=V\beta \\
+    \pr{\pt{V}{P}}_T&=-Vk_T
+\end{align*}
+
+Y como las diferenciales son exactas entonces tenemos que 
+\begin{align*}
+    \pr{\pt{}{p}\pr{\pt{V}{T}}_p}_T&=\pr{\pt{}{T}\pr{\pt{V}{p}}_T}_p\\
+    \Rightarrow \pr{\pt{}{p}V\beta}_T&=\pr{\pt{}{T}-Vk_T}_p\\
+    \therefore \pr{\pt{V\beta}{p}}_T&=-\pr{\pt{Vk_t}{T}}_p
+\end{align*}
 
 \end{tcolorbox}
 \section*{9.-} 
@@ -297,7 +479,7 @@ la temperatura. Determinar:
 \end{enumerate}
 
 \begin{tcolorbox}[breakable]
-    \subsubsection*{a)}
+    \subsubsection*{1.}
     Podemos obtener la temperatura mediante la relación:
     \begin{align*}
         T = k(R-R_0) + T_0
@@ -308,7 +490,7 @@ la temperatura. Determinar:
         T_0 &= 0  \\
         T_{100} &= k(R_{100}-R_0) 
     \end{align*}
-    \subsubsection*{b)}
+    \subsubsection*{2.}
     Despejamos el valor de $k$:
     \begin{align*}
         k &= \frac{T_{100}}{R_{100}-R_0} = 0.25 \left[ \frac{\degree C}{\Omega} \right]

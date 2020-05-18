@@ -38,15 +38,61 @@ Considerando que la energía interna de un sistema hidrostático es una función
 deducir las ecuaciones:
 \begin{enumerate}[a)]
     \item \[ dQ 
-    = \left[ \left( \frac{\partial U}{\partial T}\right)_p + p\left( \frac{\partial V}{\partial T} \right)_p \right] dT
-    + \left[ \left(\frac{\partial U }{\partial p}\right)_T + p\left( \frac{\partial V}{\partial p} \right)_T \right] dp \]
-    \item \[ \left(\frac{\partial U}{\partial T}\right)_p 
+    = \left[\left(\frac{\partial U}{\partial T}\right)_p + p\left( \frac{\partial V}{\partial T} \right)_p \right] dT
+    + \left[\left(\frac{\partial U}{\partial p}\right)_T + p\left( \frac{\partial V}{\partial p} \right)_T \right] dp \]
+    \item \[\left(\frac{\partial U}{\partial T}\right)_p 
     = C_p - pV\beta \]
-    \item \[ \left( \frac{\partial U}{\partial p}\right)_T 
+    \item \[\left( \frac{\partial U}{\partial p}\right)_T 
     = pVk_T - (C_p-C_V)\frac{k_T}{\beta} \]
 \end{enumerate}
 \begin{tcolorbox}[breakable]
-    
+    \subsubsection*{a)}
+    Partimos de la relación:
+    \begin{align*}
+        dQ 
+        &= dU - dW \\
+        &= dU + pdV
+    \end{align*}
+    suponiendo que contamos con $U(T,p)$ y $V(T,p)$ se tiene entonces:
+    \begin{align*}
+        dQ 
+        &=\left(\frac{\partial U}{\partial T}\right)_p dT + \left(\frac{\partial U}{\partial p}\right)_T dp
+        + p\left( \frac{\partial V}{\partial T} \right)_p dT + p\left( \frac{\partial V}{\partial p} \right)_T dp \\
+        &= \left[\left(\frac{\partial U}{\partial T}\right)_p + p\left( \frac{\partial V}{\partial T} \right)_p \right] dT
+        + \left[\left(\frac{\partial U}{\partial p}\right)_T + p\left( \frac{\partial V}{\partial p} \right)_T \right] dp
+    \end{align*}
+    \subsubsection*{b)}
+    Partimos de la relación:
+    \begin{align*}
+        \left(\frac{\partial Q}{\partial T}\right)_p &= \left(\frac{\partial U}{\partial T}\right)_p + p\left( \frac{\partial V}{\partial T} \right)_p \\
+        \left(\frac{\partial U}{\partial T}\right)_p &= \left(\frac{\partial Q}{\partial T}\right)_p  - p\left( \frac{\partial V}{\partial T} \right)_p \\
+        &= C_p - pV\beta 
+    \end{align*}
+    \subsubsection*{c)}
+    Partimos de la relación:
+    \begin{align*}
+        Q(T,V) &= Q(T,p(T,V)) \\
+        \left( \frac{\partial Q}{\partial T} \right)_V 
+        &= \left(\frac{\partial Q}{\partial T}\right)_p + \left(\frac{\partial Q}{\partial p}\right)_T \left( \frac{\partial p}{\partial T} \right)_V  \\
+        C_v 
+        &= C_p + \left[ \left( \frac{\partial U}{\partial p} \right)_T -pVk_T \right] \left( \frac{\partial p}{\partial T} \right)_V 
+    \end{align*}
+    encontramos una expresión para $\left( \frac{\partial p}{\partial T} \right)_V$ mediante la relación:
+    \begin{align*}
+        \left( \frac{\partial p}{\partial T} \right)_V 
+        \left( \frac{\partial T}{\partial V} \right)_p 
+        \left( \frac{\partial V}{\partial p} \right)_T
+        &= -1 \\
+        \left( \frac{\partial p}{\partial T} \right)_V 
+        &= \frac{1}{-\left(\frac{\partial V}{\partial p} \right)_T}\left( \frac{\partial V}{\partial T} \right)_p \\
+        &= \frac{V\beta}{Vk_T} = \frac{\beta}{k_T} 
+    \end{align*}
+    sustituyendo obtenemos
+    \begin{align*}
+        C_V &= C_p + \left[ -pVk_T + \left(\frac{\partial U}{\partial p}\right)_T  \right] \frac{\beta}{k_T} \\
+        \left(\frac{\partial U}{\partial p}\right)_T &= pVk_T - (C_p-C_V)\frac{k_T}{B}
+    \end{align*}
+
 \end{tcolorbox}
 
 \section*{2.-}
@@ -58,7 +104,12 @@ una elevación de temperatura. Considerando el líquid como sistema:
     \item ¿Cuál es el signo de $\Delta U$?
 \end{enumerate}
 \begin{tcolorbox}[breakable]
-    
+    \subsubsection*{a)}
+    No, el calor 
+    \subsubsection*{b)}
+    Si, 
+    \subsubsection*{c)}
+    Positivo
 \end{tcolorbox}
 
 \section*{3.-} 
@@ -78,7 +129,20 @@ se vale:
     T &= cte p^{1-\frac{1}{\gamma}}
 \end{align*}
 \begin{tcolorbox}[breakable]
-    
+    Desarrollamos la expresión:
+    \begin{align*}
+        TV^{\gamma-1} 
+        &= \frac{T}{V}V^\gamma \\
+        &= kPV^\gamma \\
+        &= cte  
+    \end{align*}
+    Desarrollamos la expresión:
+    \begin{align*}
+        T 
+        &= kPV \\
+        &= kPcteP^{-\frac{1}{\gamma}} \\
+        &= cteP^{1-\frac{1}{\gamma}} 
+    \end{align*}
 \end{tcolorbox}
 \section*{5.-}
 Explicar las contribuciones energéticas para cada proceso en el ciclo de Otto, que se 
@@ -88,7 +152,18 @@ recorre en el sentido $a \to b \to d \to a$. Calcular la eficiencia del ciclo.
     \includegraphics{images/p5_cycle.png}
 \end{figure}
 \begin{tcolorbox}[breakable]
-    
+    \subsubsection*{$a \to b$}
+    Comenzamos con la relación:
+    \begin{align*}
+        PV^{\gamma} &= c
+    \end{align*}
+    el trabajo esta dado por:
+    \begin{align*}
+        W 
+        &= \int_{V_a}^{V_b} -pdV \\
+        &= \int_{V_a}^{V_b} cV^{-\gamma}dV \\
+        &= \frac{V^{1-\gamma}}{1-\gamma} 
+    \end{align*}
 \end{tcolorbox}
 
 \end{document}

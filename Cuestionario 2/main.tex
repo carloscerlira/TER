@@ -39,11 +39,11 @@
 \maketitle
 \section*{1.-}
 Una olla está llena a la mitad con agua y se tapa formando un sello
-hermético que no permite el escape de vapor. La olla se calienta en una estufam 
-formándose vapor de agua dentro de ell.a La estufa se apaga y el vapor se condensa. 
+hermético que no permite el escape de vapor. La olla se calienta en una estufa 
+formándose vapor de agua dentro de ella La estufa se apaga y el vapor se condensa. 
 ¿Este ciclo es reversible o irreversible?. Explique
 \begin{tcolorbox}[breakable]
-
+    Irreversible, ya que no ocurre de forma espontánea, se necesita del calor de la estufa.
 \end{tcolorbox}
 
 \section*{2.-}
@@ -60,17 +60,42 @@ Convertir energía mecánica totalmente en calor, ¿Viola la segunda ley de la t
 \end{tcolorbox}
 
 \section*{3.-}
-Si ninguna máquina real puede ser tan eficiente como una máquina de Carnot que opera entre las mismas 
-temperaturas ¿qué sentido tiene deducir y analizar la ecuación $\rho = 1- \frac{T_C}{T_H}$?
+\begin{enumerate}[a)]
+    \item Si ninguna máquina real puede ser tan eficiente como una máquina de Carnot que opera entre las mismas 
+    temperaturas ¿qué sentido tiene deducir y analizar la ecuación $\rho = 1- \frac{T_C}{T_H}$?
+    \item ¿Qué eficiencia tendría una máquina de Carnot que opera con $T_H = T_C$?,
+    ¿Y si $T_C=0K$ y $T_H$ cualquier otra temperaturas mayor? Discuta. 
+\end{enumerate}
 \begin{tcolorbox}[breakable]
-
+    \subsubsection*{a)}
+    Nos sirve como un referente para comparar que tan eficiencia es una máquina real comparada con la 
+    mejor eficiencia que se puede obtener.
+    \subsubsection*{b)}
+    Cuando $T_H = T_C$ se tiene:
+    \[ \rho = 0\]
+    Como no hay una diferencia de temperatura entre las fuentes no se puede realizar un trabajo, 
+    por lo tanto la eficiencia es cero. \\ 
+    Cuando $T_C=0K$ se tiene:
+    \[ \rho = 1 \]
+    Todo el calor se convierte en trabajo, situación poco ideal de implementar pues conseguir 
+    temperaturas bajas es costoso.
 \end{tcolorbox}
 
 \section*{4.-}
 Visalice el ciclo de Carnot para un Gas Ideal y discuta cuales serían las consecuencias de que dos isotermas 
 se cortaran o que dos adiabáticas se cortaran.
 \begin{tcolorbox}[breakable]
-
+    El Ciclo de Carnot para un gas ideal se puede visualizar con el diagrama $PV$ y consta de 4 procesos:
+    \begin{itemize}
+        \item Dos segmentos adiabáticos.
+        \item Dos segmentos isotérmicos a temperatruas $T_H$ y $T_C$.
+    \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{images/p4_diagram.jpg}
+    \end{figure}
+    Si dos isótermas se cruzan podriamos crear una proceso de Carnot que funcione con un solo foco, lo cual es
+    imposible
 \end{tcolorbox}
 
 \section*{5.-}
@@ -94,9 +119,9 @@ par de focos térmicos tienen la misma eficiencia térmica".
         \caption{Diagrama acoplamiento de motores}
         \label{}
     \end{figure}
-    Este nuevo motor toma un calor 
+    Este nuevo motor toma un calor:
     \[ Q_T = Q-W_B-(Q-W_A) = W_A - W_B \]
-    de la fuente $T_C$ y genera un trabajo 
+    de la fuente $T_C$ y genera un trabajo: 
     \[ W_T = W_A-W_B \]
     Esto viola el segundo axioma de Planck ya que tomamos una cantidad $Q_T$ del un solo foco
     y producimos la misma cantidad de trabajo. \\ \\

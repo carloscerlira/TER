@@ -79,13 +79,17 @@ Expresar $\mu$ como función de $T$ y $p$
 Se encuentra que un sistema obedece a las relaciones $U=PV$ y $P=BT^2$, donde $B$ es una constante.
 Encontrar la función fundamental del sistema.
 \begin{tcolorbox}
+    Cálculamos las ecuaciones de estado del sistema:
     \begin{align*}
         u 
         &= BvT^2 \\
         \tfrac{1}{T}
         &= (\tfrac{Bv}{u})^{\frac{1}{2}} \\
         \tfrac{P}{T}
-        &= \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}} \\
+        &= \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}} 
+    \end{align*}
+    Encontrmos $s(u,v)$ mediante la relación:
+    \begin{align*}    
         ds
         &= \tfrac{1}{T}du + \tfrac{P}{T}dv \\
         &= (\tfrac{Bv}{u})^{\frac{1}{2}}du + \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}}dv \\
@@ -94,7 +98,13 @@ Encontrar la función fundamental del sistema.
         B(\tfrac{Bv}{u})^{-\frac{1}{2}} + f'(v) &= \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}} \\
         f'(v) &= \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}}-B(\tfrac{Bv}{u})^{-\frac{1}{2}} \\
         f'(v) &= 0 \\
-        s(u,v) &= 2(\tfrac{Bv}{u})^{\frac{1}{2}}u+C
+        s(u,v) &= 2(\tfrac{Bv}{u})^{\frac{1}{2}}u+C 
+    \end{align*}
+    Multiplicando por $N$ encontramos la ecuación fundamental del sistema:
+    \begin{align*}
+        S(U,V,N) 
+        &= Ns(u,v) \\
+        &= 2(BVU)^{\frac{1}{2}}+CN 
     \end{align*}
 \end{tcolorbox}
 

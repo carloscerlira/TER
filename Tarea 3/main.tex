@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\textheight = 25cm 
+\textwidth = 15cm
+\topmargin = -3.0cm 
+\oddsidemargin = 1.5cm
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    citecolor=black,      
+    urlcolor=blue,
+    }
+
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{gensymb}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools, xparse}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage[many]{tcolorbox}
+\usepackage{lipsum}
+\usepackage{amssymb}
+
+\title{Tarea 3 Termodinámica}
+\author{Cerritos Lira, Carlos}
+\date{8 de junio del 2020}
+
+\newcommand{\pr}[1]{\left(#1\right)}
+\newcommand{\pt}[2]{\dfrac{\partial #1}{\partial #2}}
+
+\begin{document}
+\maketitle
+\section*{1.-}
+\subsection*{a)}
+Encontrar las tres ecuaciones de estado del sistrema con ecuación fundamental
+\[ u = (\tfrac{\theta}{R})s^2 - (\tfrac{R\theta}{v_0^2})v^2 \]
+\begin{tcolorbox}
+    Partimos de la relación:
+    \begin{align*}
+        U 
+        &= (\tfrac{\theta}{R}) \tfrac{S^2}{N} - (\tfrac{R\theta}{v_0^2})\tfrac{V^2}{N} \\
+        \tfrac{dU}{dS} 
+        &= \tfrac{2\theta}{R}\tfrac{S}{N} \\
+        &= T \\
+        \tfrac{dU}{dV}
+        &= -\tfrac{2R\theta}{v_0^2}\tfrac{V}{N} \\
+        &= -p \\
+        \tfrac{\partial U}{\partial N} 
+        &= -(\tfrac{\theta}{R})\tfrac{S}{N^2}+(\tfrac{R\theta}{v_0^2})\tfrac{V^2}{N^2} \\
+        &= \mu
+    \end{align*}
+\end{tcolorbox}
+
+\subsection*{b)}
+Mostrar que para este sistema $\mu = -u$
+\begin{tcolorbox}
+    \begin{align*}
+        \tfrac{\partial U}{\partial N} &= -(\tfrac{\theta}{R})\tfrac{S}{N^2}+(\tfrac{R\theta}{v_0^2})\tfrac{V^2}{N^2} \\
+        \mu &= -u    
+    \end{align*}
+\end{tcolorbox}
+
+\subsection*{c)}
+Expresar $\mu$ como función de $T$ y $p$
+\begin{tcolorbox}
+    \begin{align*}
+        \mu &= \tfrac{Ts}{2} - \tfrac{pv}{2}
+    \end{align*}
+\end{tcolorbox}
+
+\section*{2.-}
+Se encuentra que un sistema obedece a las relaciones $U=PV$ y $P=BT^2$, donde $B$ es una constante.
+Encontrar la función fundamental del sistema.
+\begin{tcolorbox}
+    \begin{align*}
+        u 
+        &= BvT^2 \\
+        \tfrac{1}{T}
+        &= (\tfrac{Bv}{u})^{\frac{1}{2}} \\
+        \tfrac{P}{T}
+        &= \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}} \\
+        ds
+        &= \tfrac{1}{T}du + \tfrac{P}{T}dv \\
+        &= (\tfrac{Bv}{u})^{\frac{1}{2}}du + \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}}dv \\
+        s(u,v)
+        &= 2(\tfrac{Bv}{u})^{\frac{1}{2}}u + f(v) \\
+        B(\tfrac{Bv}{u})^{-\frac{1}{2}} + f'(v) &= \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}} \\
+        f'(v) &= \tfrac{u}{v}(\tfrac{Bv}{u})^{\frac{1}{2}}-B(\tfrac{Bv}{u})^{-\frac{1}{2}} \\
+        f'(v) &= 0 \\
+        s(u,v) &= 2(\tfrac{Bv}{u})^{\frac{1}{2}}u+C
+    \end{align*}
+\end{tcolorbox}
+
+\end{document}

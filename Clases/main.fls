@@ -1,7 +1,7 @@
-PWD c:\Users\i5 8400\Desktop\6th semester\TER\Clases
+PWD c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases
 INPUT C:\Users\i5 8400\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\i5 8400\Desktop\6th semester\TER\Clases\main.tex
-OUTPUT c:\Users\i5 8400\Desktop\6th semester\TER\Clases\main.log
+INPUT c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases\main.tex
+OUTPUT c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases\main.log
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
@@ -192,7 +192,7 @@ INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\fronten
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfadings.code.tex
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
-OUTPUT c:\Users\i5 8400\Desktop\6th semester\TER\Clases\main.pdf
+OUTPUT c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases\main.pdf
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tcolorbox\tcbposter.code.tex
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty
@@ -216,9 +216,9 @@ INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\varwidth\varw
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\varwidth\varwidth.sty
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\bm.sty
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\bm.sty
-INPUT c:\Users\i5 8400\Desktop\6th semester\TER\Clases\main.aux
-INPUT c:\Users\i5 8400\Desktop\6th semester\TER\Clases\main.aux
-OUTPUT c:\Users\i5 8400\Desktop\6th semester\TER\Clases\main.aux
+INPUT c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases\main.aux
+INPUT c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases\main.aux
+OUTPUT c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases\main.aux
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -249,7 +249,7 @@ INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\i5 8400\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT c:\Users\i5 8400\Desktop\6th semester\TER\Clases\main.aux
+INPUT c:\Users\i5 8400\Desktop\Sexto Semestre\Termodinámica\Clases\main.aux
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\i5 8400\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb

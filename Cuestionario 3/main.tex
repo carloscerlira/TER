@@ -41,11 +41,22 @@
 Dos sistemas tienen las siguientes ecuaciones de estado. 
 \[ \frac{1}{T_1} = \frac{3}{2}R\frac{N_1}{U_1} \quad 
 \frac{1}{T_2} = \frac{5}{2}R\frac{N_2}{U_2} \]
-El número de moles dle primer sistema es $N_1 = 2$ y del segundo $N_2 = 3$. Los dos 
-sistemas se separna por una pared diatérmica. La energía total del sistema compuesto es $U_0$. 
+El número de moles del primer sistema es $N_1 = 2$ y del segundo $N_2 = 3$. Los dos 
+sistemas se separan por una pared diatérmica. La energía total del sistema compuesto es $U_0$. 
 ¿Cuál es la energía de cada sistema y la temperatura en equilibrio?
 \begin{tcolorbox}[breakable]
-    
+    Como estamos en equilibrio se cumple $T_1=T_2=T_0$, además:
+    \begin{align*}
+        U_1+U_2 &= U_0 \\
+        \frac{3}{2}RN_1T_1 + \frac{5}{2}RN_2T_2 &= U_0 \\
+        \frac{3}{2}R(2T_0+3T_0) &= U_0 \\
+        T_0 &= \frac{2}{15}\frac{1}{R} U_0
+    \end{align*}
+    despejando obtenemos:
+    \begin{align*}
+        U_1 &= \frac{3}{15}\frac{1}{R}U_0 \\
+        U_2 &= \frac{5}{15}\frac{1}{R}U_0
+    \end{align*}
 \end{tcolorbox}
 
 \section*{2.-}
@@ -55,14 +66,37 @@ de acuerdo con la relación:
 Calcular la transferencia de calor $dQ$ del sistem si el volumen molar se cambia por un pequeño
 incremento $dv = v-v_0$ a temperatura constante $T_0$
 \begin{tcolorbox}[breakable]
-    
+    Notamos que tenemos $v(T,p)$. Como $T$ permanece constante:
+    \begin{align*}
+        dQ 
+        &= Tds \\
+        &= T\left(\frac{\partial s}{\partial T}dT + \frac{\partial s}{\partial v}dv \right), \quad \text{usando la representación de $s=s(T,v)$} \\
+        &= T\frac{\partial s}{\partial v}dv, \quad \text{ya que $dT = 0$} \\
+        &= T\frac{\partial p}{\partial T}dv, \quad \text{usando la relación de Maxwell para $\frac{\partial s}{\partial v}$}
+    \end{align*}
+    de la ecuación que satisface el sistema obtenemos:
+    \begin{align*}
+        p &= p_0 + \frac{1}{b}(v-v_0) - \frac{a}{b}(T-T_0) \\
+        \frac{\partial p}{\partial T} &= -\frac{a}{b}
+    \end{align*}
+    sustituyendo en la primer ecuación encontrada obtenemos:
+    \begin{align*}
+        dQ
+        &= -\frac{a}{b}Tdv
+    \end{align*}
 \end{tcolorbox}
 
 \section*{3.-}
 Obtener $\frac{\partial H}{\partial V}_{T,N}$ en términos de cantidades que se puedan medir en el 
 laboratorio.
 \begin{tcolorbox}[breakable]
-    
+    \begin{align*}
+        H &= U + pV \\
+        dH &= dU + Vdp + pdV \\
+        dH &= TdS + Vdp \\
+        \frac{\partial H}{\partial V} &= T\frac{\partial S}{\partial V} + V\frac{\partial p}{\partial V} \\
+        \frac{\partial H}{\partial V} &= T\frac{\partial p}{\partial T} + V\frac{\partial p}{\partial V} 
+    \end{align*}
 \end{tcolorbox}
 
 \end{document}

@@ -28,8 +28,8 @@
 \usepackage{lipsum}
 \usepackage{amssymb}
 
-\title{Cuestionario 3 Termodinámica}
-\author{Cerritos Lira, Carlos}
+\title{Tarea 4 Termodinámica}
+\author{Cerritos Lira Carlos}
 \date{16 de junio del 2020}
 
 \newcommand{\pr}[1]{\left(#1\right)}
@@ -49,13 +49,14 @@ sistemas se separan por una pared diatérmica. La energía total del sistema com
     \begin{align*}
         U_1+U_2 &= U_0 \\
         \frac{3}{2}RN_1T_1 + \frac{5}{2}RN_2T_2 &= U_0 \\
-        \frac{3}{2}R(2T_0+3T_0) &= U_0 \\
-        T_0 &= \frac{2}{15}\frac{1}{R} U_0
+        RT_0(3+\frac{15}{2}) &= U_0 \\
+        \frac{21}{2}RT_0 &= U_0 \\
+        T_0 &= \frac{2}{21}\frac{1}{R} U_0
     \end{align*}
     despejando obtenemos:
     \begin{align*}
-        U_1 &= \frac{3}{15}\frac{1}{R}U_0 \\
-        U_2 &= \frac{5}{15}\frac{1}{R}U_0
+        U_1 &= \frac{6}{21}U_0 \\
+        U_2 &= \frac{15}{21}U_0
     \end{align*}
 \end{tcolorbox}
 
@@ -70,9 +71,9 @@ incremento $dv = v-v_0$ a temperatura constante $T_0$
     \begin{align*}
         dQ 
         &= Tds \\
-        &= T\left(\frac{\partial s}{\partial T}dT + \frac{\partial s}{\partial v}dv \right), \quad \text{usando la representación de $s=s(T,v)$} \\
-        &= T\frac{\partial s}{\partial v}dv, \quad \text{ya que $dT = 0$} \\
-        &= T\frac{\partial p}{\partial T}dv, \quad \text{usando la relación de Maxwell para $\frac{\partial s}{\partial v}$}
+        &= T\left(\frac{\partial s}{\partial T}dT + \frac{\partial s}{\partial v}dv \right) &&\text{usando la representación de $s=s(T,v)$} \\
+        &= T\frac{\partial s}{\partial v}dv &&\text{ya que $dT = 0$} \\
+        &= T\frac{\partial p}{\partial T}dv &&\text{usando la relación de Maxwell para $\frac{\partial s}{\partial v}$}
     \end{align*}
     de la ecuación que satisface el sistema obtenemos:
     \begin{align*}
@@ -91,12 +92,14 @@ Obtener $\frac{\partial H}{\partial V}_{T,N}$ en términos de cantidades que se 
 laboratorio.
 \begin{tcolorbox}[breakable]
     \begin{align*}
-        H &= U + pV \\
+        H &= U + pV  &&\text{la relación fundamental} \\
         dH &= dU + Vdp + pdV \\
-        dH &= TdS + Vdp \\
+        dH &= TdS + Vdp &&\text{usando $dU = TdS - pdV$} \\
         \frac{\partial H}{\partial V} &= T\frac{\partial S}{\partial V} + V\frac{\partial p}{\partial V} \\
-        \frac{\partial H}{\partial V} &= T\frac{\partial p}{\partial T} + V\frac{\partial p}{\partial V} 
+        \frac{\partial H}{\partial V} &= T\frac{\partial p}{\partial T} + V\frac{\partial p}{\partial V}
+        &&\text{usando la relación de maxweel para $\frac{\partial S}{\partial V}$} 
     \end{align*}
+    las cuáles son cantidades que se pueden medir en el laboratorio.
 \end{tcolorbox}
 
 \end{document}

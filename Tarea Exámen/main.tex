@@ -39,29 +39,50 @@
 \maketitle
 \section*{1.-}
 Imagina un filtro de aire especial colocado en la ventana de una casa. Los diminutos orificios en el filtro sólo
-permiten la slaida de moléculas de aire cuya rapidez sea mayor que cierto valor, y sólo permiten la entrada a aquellas cuya 
+permiten la salida de moléculas de aire cuya rapidez sea mayor que cierto valor, y sólo permiten la entrada a aquellas cuya 
 rapidez sea menor que ese valor. Explica por qué tal filtro enfría la casa y por qué la segunda ley de la Termodinámica 
 imposibilida la construcción de semejante filtro. 
 \begin{tcolorbox}[breakable]
-
+    La casa se enfría ya que después de un tiempo la energía cinética de las moléculas dentro solo puede ser menor 
+    que su energía cinética promedio al inicio, por ende la temperatura final es menor. \\ \\
+    Dicho filtro no se puede contruir, ya que para clasificar las moléculas necesitaría suministrar 
+    energía, es decir este no es un proceso espontáneo, de lo contrario violaría la segunda ley de la termodinámica.
 \end{tcolorbox}
 
 \section*{2.-}
-Decides tomar un reconfortante baño caliente, pero descubres tu que tu desconsiderado compañero de cuerto consumió cais toda el 
-agua caliente. Entonces, llneas la tina con $280kg$ de agua a $30 \deg C$ e intentas calentarla más vertiendo $5kg$ más de agua 
+Decides tomar un reconfortante baño caliente, pero descubres que tu desconsiderado compañero de cuarto consumió casi toda el 
+agua caliente. Entonces, llenas la tina con $280kg$ de agua a $30 \deg C$ e intentas calentarla más vertiendo $5kg$ más de agua 
 que alcanzó la ebullición en una estufa.
 \begin{enumerate}[a)]
     \item ¿Se trata de un proceso reversible o irreversible? Utiliza un razonamiento de física para explicar el hecho.
-    \item Calcula la temperatura final dle agua para el baño.
-    \item Calcula el cambio nto de la entropía del sistema (agua del baño + agua en ebullición), suponiendo
+    \item Calcula la temperatura final del agua para el baño.
+    \item Calcula el cambio neto de la entropía del sistema (agua del baño + agua en ebullición), suponiendo
     que no hay intercambio de calor con el aire o con la tina misma.
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-    
+    Irreversible, ya que sería necesario realizar trabajo sobre el sistema
+    para poder regresar al estado inicial.
+
     \subsubsection*{b)}
-    
+    Tenemos la relación:
+    \begin{align*}
+        Q &= Q_1+Q_2 \\ 
+        0 &= m_1c\Delta T_1+m_2c\Delta T_2 \\
+        0 &= 270c(T-30)+5c(T-100) \\
+        275T &= 270(30)+5(100) \\
+        T &= \frac{8600}{275} \\
+        T &= 31.27 \deg C = 304.42 K
+    \end{align*}
     \subsubsection*{c)}
+    Partimos de la relación:
+    \begin{align*}
+        \Delta S 
+        &= \Delta S_1 + \Delta S_2 \\
+        &= m_1cln(\tfrac{304.42K}{303.15K}) + m_2cln(\tfrac{304.42K}{373.15K}) \\
+        &= 250kg \times 4190 \tfrac{J}{kg \cdot K} \times ln(\tfrac{304.42K}{303.15K}) + 5kg \times \times 4190 \tfrac{J}{kg \cdot K} \times ln(\tfrac{304.42K}{373.15K}) \\
+        &= 464.66 \tfrac{J}{K}
+    \end{align*}
 \end{tcolorbox}
 
 \section*{3.-}
@@ -70,33 +91,127 @@ $(20\deg C)$ antes de beberlo.
 \begin{enumerate}[a)]
     \item Calcular el cambio de la entropía del agua mientras se enfria.
     \item En escencia, el proceso de enefriamento es isotérmico para el aire en tu cocina. Calcular el cambio 
-    de entroía dle aire mientras el té se enfría, suponiendo que todo el calor que pierde el agua va al aire.
-    ¿Cuál es el cambio de entroía del sistema constituido por té + aire?
+    de entropía del aire mientras el té se enfría, suponiendo que todo el calor que pierde el agua va al aire.
+    ¿Cuál es el cambio de entrpía del sistema constituido por té + aire?
 \end{enumerate}
 \begin{tcolorbox}[breakable]
     \subsubsection*{a)}
-
+    Nuevamente partimos de la relación:
+    \begin{align*}
+        \Delta S_{te}
+        &= mcln(\tfrac{T_2}{T_1}) \\
+        &= 0.25kg \times 4190 \tfrac{J}{kg \cdot K} \times ln(\tfrac{293K}{358K}) \\
+        &= -210\tfrac{J}{K}
+    \end{align*}
     \subsubsection*{b)}
+    De acuerdo a la conservación de la energía el calor perdido por el agua 
+    es absorbodo por el aire, esto es:
+    \begin{align*}
+        Q_{aire} 
+        &= -Q_{te} \\
+        &= -mc\Delta T \\
+        &= -mc(T_2-T_1) \\
+        &= -0.25kg \times 4100 \tfrac{J}{kg \cdot K} \times (293K-358K) \\
+        &= 6.8 \times 10^4 J
+    \end{align*}
+    Ahora bien, como el proceso de enfriamento es isotérmico, podemos encontrar 
+    el cambio de entropía del aire por:
+    \begin{align*}
+        \Delta S_{aire} 
+        &= \tfrac{Q_{aire}}{T_{aire}} \\
+        &= \tfrac{6.8 \times 10^4J}{293 K} \\
+        &= 232.1 \tfrac{J}{K} 
+    \end{align*}
+    El cambio de entrpía total está dado por:
+    \begin{align*}
+        \Delta S 
+        &= \Delta S_{aire} + \Delta S_{te} \\
+        &= -210 \tfrac{J}{K} + 232.1 \tfrac{J}{K} \\
+        &= 22.1 \tfrac{J}{K}
+    \end{align*}
 \end{tcolorbox}
 
 \section*{4.-}
 Demostrar la relación:
 \[ k_T = k_s + \frac{TV\beta^2}{C_p} \]
 \begin{tcolorbox}[breakable]
-
+    Por definición:
+    \begin{align*}
+        C_p &= T(\tfrac{\partial S}{\partial T})_p \\
+        C_V &= T(\tfrac{\partial S}{\partial T})_V
+    \end{align*}
+    rescribimos $C_p$:
+    \begin{align*}
+        C_p 
+        &= T(\tfrac{\partial S}{\partial T})_p \\
+        &= T(\tfrac{\partial S}{\partial T})_V + T(\tfrac{\partial S}{\partial V})_T (\tfrac{\partial V}{\partial T})_p \\
+        &= C_V + TV\beta(\tfrac{\partial S}{\partial V})_T && \text{usando la definición $\beta = \tfrac{1}{V}(\tfrac{\partial V}{\partial T})_p$} \\
+        &= C_V + \tfrac{TV\beta^2}{k_T} && \text{usando la relación $(\tfrac{\partial S}{\partial V})_T = \tfrac{\beta}{k_T}$, obtenida usando Maxwell}
+    \end{align*}
+    ahora bien, observamos que si se cumple:
+    \begin{align*}
+        \frac{C_p}{C_V} &= \frac{k_T}{k_s}
+    \end{align*}
+    ya habríamos acabdo la demostración, veremos que esto se satisface. \\
+    Usando la relación cíclica:
+    \begin{align*}
+        (\tfrac{\partial S}{\partial T})_p (\tfrac{\partial T}{\partial p})_S (\tfrac{\partial p}{\partial S})_T &= -1 \\
+        (\tfrac{\partial S}{\partial T})_p &= -(\tfrac{\partial p}{\partial T})_S (\tfrac{\partial S}{\partial p})_T
+    \end{align*}
+    de la misma manera:
+    \begin{align*}
+        (\tfrac{\partial S}{\partial T})_V(\tfrac{\partial T}{\partial V})_S (\tfrac{\partial V}{\partial S})_T &= -1 \\
+        (\tfrac{\partial S}{\partial T})_V &= -(\tfrac{\partial V}{\partial T})_S (\tfrac{\partial S}{\partial V})_T
+    \end{align*}
+    sustituyendo encontrmaos:
+    \begin{align*}
+        \tfrac{C_p}{C_V}
+        &= \frac{(\tfrac{\partial S}{\partial T})_p}{(\tfrac{\partial S}{\partial T})_V} \\
+        &= \frac{(\tfrac{\partial p}{\partial T})_S (\tfrac{\partial S}{\partial p})_T}{(\tfrac{\partial V}{\partial T})_S (\tfrac{\partial S}{\partial V})_T} \\
+        &= \frac{(\tfrac{\partial V}{\partial p})_T}{(\tfrac{\partial V}{\partial p})_S} \\
+        &= \frac{k_T}{k_s}
+    \end{align*}
+    Sutituyendo la relación encontrada en la ecuación para $C_p$:
+    \begin{align*}
+        C_p &= C_V + \tfrac{TV\beta^2}{k_T} \\
+        1 &= \tfrac{C_V}{C_p} + \tfrac{TV\beta^2}{C_pK_T} \\
+        1 &= \tfrac{k_s}{k_T} + \tfrac{TV\beta^2}{C_pK_T} \\
+        k_T &= k_s + \tfrac{TV\beta^2}{C_p}
+    \end{align*}
+    que es lo que se quería demostrar.
 \end{tcolorbox}
 
 \section*{5.-}
 Explciar de forma intuitiva ¿por qué $C_p \geq C_v$ y $k_t \geq k_s$?
 \begin{tcolorbox}[breakable]
+    El calor específico es la cantidad de calor que se requiere para elevar la emperatura una unidad. 
+    Si añadimos este calor manteniendo el volumen constante $C_p$, todo la energía se usa para elevar la energía cinética de las partículas, 
+    sin embargo si añadimos este calor a presión constante $C_V$, a la hora de expanderse el gas debe de realizar un trabajo sobre las paredes del 
+    contenedor, por esta razón $C_p \geq C_v$, y puede demostrar que cumplen la relación:
+    \[ C_p = C_v + R \]
 
 \end{tcolorbox}
 
 \section*{6.-}
-derivar una ecuación para la curva de coexistencia de fase entre el líquido y el gas, bajo la suposición de que el calor latente 
+Derivar una ecuación para la curva de coexistencia de fase entre el líquido y el gas, bajo la suposición de que el calor latente 
 $L$ es independiente de la temperatura, que el vapor puede ser tratado como un gas ideal y que $V_{vap} >> V_{liq}$
 \begin{tcolorbox}[breakable]
-
+Usamos la ecuación de Clausius–Clapeyron que aplica a todas las curvas de coexistencia:
+\begin{align*}
+    \frac{dP}{dT} 
+    &= \frac{L(T)}{T\Delta V(T)} \\
+    &= \frac{L}{TV_{vap}} && \text{Dado que $V_{vap} >> V_{liq}$ y $L$ no depende de $T$} \\
+    &= \frac{LP}{RT^2} && \text{Usando la ley del gas ideal $V = \frac{RT}{P}$} 
+\end{align*}
+de donde obtenemos la ecuación diferencial:
+\begin{align*}
+    \frac{\tfrac{dP}{dT}}{P} 
+    &= \frac{L}{RT^2} \\ 
+    \frac{d}{dT}ln(P(T)) &= \frac{L}{RT^2} \\
+    ln(P(T)) &= -\frac{L}{RT}+C \\
+    P(T) &= Kexp(-\tfrac{L}{RT})  
+\end{align*}
+la cual es la curva de coexistencia de la fase líqudo-gas.
 \end{tcolorbox}
 
 \end{document}
